@@ -9,6 +9,11 @@ using namespace std;
 int main() {
     ll employees[3][4];
 
+    // for(int i = 0; i < 3; i++) {
+    //     for(int j = 0; j < 3; j++) {
+    //         cin >> employees[i][j];
+    //     }
+    // }
     cin >> employees[0][0];
     cin >> employees[0][1];
     cin >> employees[0][2];
@@ -22,7 +27,12 @@ int main() {
     cin >> employees[2][2];
 
     ll sum = 0;
+    // for(int i = 0; i < 3; i++) {
+    //     employees[i][3] = employees[i][0] + 10000 * employees[i][1] + employees[i][2];
+    //     sum += employees[i][3];
 
+    //     cout << "Employee " << i+1 << " Final Salary: " << employees[i][3] << endl;
+    // }
     employees[0][3] = employees[0][0] + 10000 * employees[0][1] + employees[0][2];
     sum += employees[0][3];
     cout << "Employee " << 1 << " Final Salary: " << employees[0][3] << endl;
@@ -34,7 +44,6 @@ int main() {
     employees[2][3] = employees[2][0] + 10000 * employees[2][1] + employees[2][2];
     sum += employees[2][3];
     cout << "Employee " << 3 << " Final Salary: " << employees[2][3] << endl;
-
 
     cout << "Total Salaries: " << sum << endl;
     cout << "Average Salary: " << sum / 3 << endl;
