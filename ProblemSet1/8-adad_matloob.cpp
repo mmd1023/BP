@@ -24,8 +24,17 @@ int main() {
     cout << "The value is not acceptable.\n";
     cout << "Number of unmet conditions: " << 4 - (c[0] + c[1] + c[2] + c[3]) << endl;
     cout << "> Unmet conditions:";
-    for(int i = 0; i < 4; i++) {
-        cout << ((!c[i])? (" " + to_string(i+1)) : "");
-    }
+    // for(int i = 0; i < 4; i++) {
+    //     cout << ((!c[i])? (" " + to_string(i+1)) : "");
+    // }
+    if (!c[0])
+        cout << " " << 1;
+    if (!c[1])
+        cout << " " << 2;
+    if (!c[2])
+        cout << " " << 3;
+    if (!c[3])
+        cout << " " << 4;
+
     return 0;
 }
