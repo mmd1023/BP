@@ -12,8 +12,6 @@ int main()
     cin >> a;
 
     int digit[6] = {(a / 100000) % 10, (a / 10000) % 10, (a / 1000) % 10, (a / 100) % 10, (a / 10) % 10, a % 10};
-
-    int is_started = 0;
     // for (int i = 0; i < 6; i++) {
     //     if (digit[i] == 3 || digit[i] == 5 || digit[i] == 7)
     //         digit[i]--;
