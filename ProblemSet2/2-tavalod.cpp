@@ -14,7 +14,7 @@ int main() {
         ll n = (b + a - 1) / a;
         if (n == 1)
             n = helper++;
-        else if (n <= helper)
+        else if (n < helper)
             n = helper++;
 
         cout << n << " ";
