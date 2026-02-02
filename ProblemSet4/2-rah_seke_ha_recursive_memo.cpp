@@ -16,20 +16,6 @@ long long solve(long long c, long long n, long long *coins) {
     for (int i = 0; i < n; i++)
         ans = min(ans, solve(c - coins[i], n, coins) + 1);
 
-    memo[c] = ans;
-    return memo[c];
-}
-
-long long solve(long long c, long long n, long long *coins) {
-    if (c == 0) return 0;
-    if (c < 0) return INF;
-
-    if (memo[c] != -1) return memo[c];
-
-    long long ans = INF;
-    for (int i = 0; i < n; i++)
-        ans = min(ans, solve(c - coins[i], n, coins) + 1);
-
     return memo[c] = ans;
 }
 
